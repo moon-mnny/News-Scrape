@@ -1,0 +1,21 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4"> CNN Style Scraper</h1>
+        <p class="lead">
+            You can save the articles you like and leave a note!
+        </p>
+        <div class="container">
+            {{#each result}}
+            <div class="card" style="width: 18rem;">
+                <img src="{{this.imgURL}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.category}}</h5>
+                    <p class="card-text">{{this.title}}</p>
+                    <a href="{{this.link}}" class="btn btn-primary">MORE</a>
+                    <a class="save" class="btn btn-primary">SAVE</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
